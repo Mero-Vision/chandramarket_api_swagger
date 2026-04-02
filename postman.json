@@ -162,218 +162,6 @@
           ]
         },
         {
-          "name": "Site Settings",
-          "item": [
-            {
-              "name": "store site settings",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "website_title",
-                      "value": "Cartyne",
-                      "type": "text",
-                      "uuid": "6748f6f0-7f9f-4875-a6e0-9a0f8403bd9e"
-                    },
-                    {
-                      "key": "logo",
-                      "type": "file",
-                      "uuid": "26fcbf33-ad00-4b2b-b351-706bc651f36c",
-                      "src": "/Users/hanciephago/Downloads/Black and Red Simple Car Icon Industrial Logo (6).png"
-                    },
-                    {
-                      "key": "address",
-                      "value": "KTM",
-                      "type": "text",
-                      "uuid": "fd3083be-31e5-46c5-9938-563933e11d9d"
-                    },
-                    {
-                      "key": "contact_no",
-                      "value": "9825915122",
-                      "type": "text",
-                      "uuid": "17f03ca2-c469-4af2-8e4b-16e07041208e"
-                    },
-                    {
-                      "key": "home_page_banner_1",
-                      "type": "file",
-                      "uuid": "23f17565-0b93-4ce6-bd3d-530e666b2997",
-                      "src": "/C:/Users/user/Music/desktop.webp"
-                    },
-                    {
-                      "key": "home_page_banner_2",
-                      "type": "file",
-                      "uuid": "fc380774-2c39-4ecd-8844-aad007e6817f",
-                      "src": "/C:/Users/user/Pictures/50-507302_download-beer-bottle-png-clipart.png"
-                    },
-                    {
-                      "key": "home_page_banner_3",
-                      "type": "file",
-                      "uuid": "db8daa58-404f-4656-a964-d5a1684197b4",
-                      "src": "/C:/Users/user/Pictures/360_F_491766294_h4j7LbW2YgfbNHhq7F8GboIc1XyBSEY5.jpg"
-                    },
-                    {
-                      "key": "privacy_policy",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "5a8fb28a-7e89-42d3-bfe2-3412f786abb2"
-                    },
-                    {
-                      "key": "terms_conditions",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "64be7628-52fb-4e0f-8d58-f2fc786ef042"
-                    },
-                    {
-                      "key": "facebook_link",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "d05216f0-c630-4c6f-a1cf-db861407253c"
-                    },
-                    {
-                      "key": "instagram_link",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "d344490a-e5bb-4e1a-9f08-6f198fbf95d0"
-                    },
-                    {
-                      "key": "tiktok_link",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "802acc92-901e-44d2-825e-6983c5878e27"
-                    },
-                    {
-                      "key": "whatsapp_number",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "3c4cc0b4-deca-450b-a269-cf78bd44c7dd"
-                    },
-                    {
-                      "key": "footer_background_color",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "76fc5e7f-4d19-4f1d-88f5-868c617041ea"
-                    },
-                    {
-                      "key": "footer_text_color",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "4a80400e-ab0d-4681-81d9-cd5300583d86"
-                    },
-                    {
-                      "key": "primary_nav_background_color",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "4f074a2d-f5f9-43f9-b225-0c683a5a7679"
-                    },
-                    {
-                      "key": "primary_nav_text_color",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "44e05f9f-1447-485a-81ae-3ca85896e60d"
-                    },
-                    {
-                      "key": "secondary_nav_background_color",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "33dc5ed0-11b0-4e0f-83f9-c87154f5d281"
-                    },
-                    {
-                      "key": "secondary_nav_text_color",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "56b05344-3b75-473f-a414-e8aea2af151a"
-                    },
-                    {
-                      "key": "email",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "413d8af0-96a1-4625-8d34-28f5b9034a96"
-                    },
-                    {
-                      "key": "about_us",
-                      "value": "hy",
-                      "type": "text",
-                      "uuid": "3a1903f7-a03b-4413-8b88-75dfb4737a9d"
-                    },
-                    {
-                      "key": "fav_icon",
-                      "value": "",
-                      "type": "text",
-                      "uuid": "a7c39fb7-f1cf-478f-a98f-f798086d60e4"
-                    }
-                  ]
-                },
-                "url": {
-                  "raw": "{{url}}/api/admin/site-settings",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "site-settings"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "show site setting data",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{url}}/api/admin/site-settings",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "site-settings"
-                  ]
-                }
-              },
-              "response": []
-            }
-          ]
-        },
-        {
           "name": "Admin",
           "item": [
             {
@@ -554,7 +342,7 @@
                   "formdata": [
                     {
                       "key": "name",
-                      "value": "Drink",
+                      "value": "Coca Cola",
                       "type": "text",
                       "uuid": "cfa7cab2-c685-4029-b87a-f55530d4fd6b"
                     },
@@ -563,6 +351,42 @@
                       "type": "file",
                       "uuid": "e60c2706-1635-45c1-9b46-98a5e57d33bf",
                       "src": "/C:/Users/user/Videos/Screenshot 2025-08-16 020628.png"
+                    },
+                    {
+                      "key": "parent_id",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "c01de622-a2c9-4087-86c3-8903f7f237ab"
+                    },
+                    {
+                      "key": "description",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "0ab3ca8a-14dc-459d-817f-ffee3e6853c6"
+                    },
+                    {
+                      "key": "meta_title",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "9e0d8401-f141-4c95-b65f-302d0e43fde0"
+                    },
+                    {
+                      "key": "meta_description",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "8ca6c1a2-3a82-4d2a-bbf7-d742c92559c5"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "bd1f1bb6-0011-4e4a-84fe-be5e18b3c644"
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "c06b8455-998d-4da5-af8c-83770edf4c5b"
                     }
                   ]
                 },
@@ -602,7 +426,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{url}}/api/admin/category?pagination_limit=5&search_keyword",
+                  "raw": "{{url}}/api/admin/category?pagination_limit=5&search_keyword&parent_id",
                   "host": [
                     "{{url}}"
                   ],
@@ -614,11 +438,14 @@
                   "query": [
                     {
                       "key": "pagination_limit",
-                      "value": "5",
-                      "type": "text"
+                      "value": "5"
                     },
                     {
                       "key": "search_keyword",
+                      "value": null
+                    },
+                    {
+                      "key": "parent_id",
                       "value": null,
                       "type": "text"
                     }
@@ -725,10 +552,10 @@
           ]
         },
         {
-          "name": "Sub Category",
+          "name": "Brand",
           "item": [
             {
-              "name": "store sub category",
+              "name": "store brand data",
               "request": {
                 "auth": {
                   "type": "bearer",
@@ -753,40 +580,129 @@
                   "formdata": [
                     {
                       "key": "name",
-                      "value": "Beer1",
+                      "value": "Laptop",
                       "type": "text",
-                      "uuid": "cfa7cab2-c685-4029-b87a-f55530d4fd6b"
+                      "uuid": "9f7b3ac2-135c-4946-944e-1f76cfd4c32b"
                     },
                     {
-                      "key": "sub_category_image",
-                      "type": "file",
-                      "uuid": "e60c2706-1635-45c1-9b46-98a5e57d33bf",
-                      "src": "/C:/Users/user/Videos/Screenshot 2026-03-18 005026.png"
+                      "key": "description",
+                      "value": "Laptop",
+                      "type": "text",
+                      "uuid": "1e9d11fb-3d4f-4647-8c43-a989d4d954e6"
                     },
                     {
-                      "key": "category_id",
+                      "key": "is_active",
                       "value": "1",
                       "type": "text",
-                      "uuid": "ca4c07c3-5915-44ad-9f19-cc6fafe2b50c"
+                      "uuid": "6130a010-f19b-49ca-911a-d9f228b97d63"
+                    },
+                    {
+                      "key": "is_featured",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "9fda095e-6706-4eb8-9122-a7b1c3cdd85a"
+                    },
+                    {
+                      "key": "brand_logo",
+                      "type": "file",
+                      "uuid": "ecacc55e-c709-46ff-bae1-10747d59a249",
+                      "src": "/C:/Users/user/Videos/WhatsApp Image 2026-01-14 at 11.22.51 PM.jpeg"
                     }
                   ]
                 },
                 "url": {
-                  "raw": "{{url}}/api/admin/sub-category",
+                  "raw": "{{url}}/api/admin/brand",
                   "host": [
                     "{{url}}"
                   ],
                   "path": [
                     "api",
                     "admin",
-                    "sub-category"
+                    "brand"
                   ]
                 }
               },
               "response": []
             },
             {
-              "name": "show all sub category",
+              "name": "update brand data",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Laptop",
+                      "type": "text",
+                      "uuid": "9f7b3ac2-135c-4946-944e-1f76cfd4c32b"
+                    },
+                    {
+                      "key": "description",
+                      "value": "Laptop",
+                      "type": "text",
+                      "uuid": "1e9d11fb-3d4f-4647-8c43-a989d4d954e6"
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "6130a010-f19b-49ca-911a-d9f228b97d63"
+                    },
+                    {
+                      "key": "is_featured",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "9fda095e-6706-4eb8-9122-a7b1c3cdd85a"
+                    },
+                    {
+                      "key": "brand_logo",
+                      "type": "file",
+                      "uuid": "ecacc55e-c709-46ff-bae1-10747d59a249",
+                      "src": "/C:/Users/user/Videos/WhatsApp Image 2026-01-14 at 11.22.51 PM.jpeg"
+                    },
+                    {
+                      "key": "_method",
+                      "value": "PUT",
+                      "type": "text",
+                      "uuid": "24f8bea3-2824-4092-9787-e111efeebfaa"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/brand/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "brand",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "show all brands",
               "request": {
                 "auth": {
                   "type": "bearer",
@@ -807,27 +723,30 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{url}}/api/admin/sub-category?pagination_limit=5&search_keyword&is_popular=true",
+                  "raw": "{{url}}/api/admin/brand?pagination_limit=8&search_keyword&is_featured=1",
                   "host": [
                     "{{url}}"
                   ],
                   "path": [
                     "api",
                     "admin",
-                    "sub-category"
+                    "brand"
                   ],
                   "query": [
                     {
                       "key": "pagination_limit",
-                      "value": "5"
+                      "value": "8",
+                      "type": "text"
                     },
                     {
                       "key": "search_keyword",
-                      "value": null
+                      "value": null,
+                      "type": "text"
                     },
                     {
-                      "key": "is_popular",
-                      "value": "true"
+                      "key": "is_featured",
+                      "value": "1",
+                      "type": "text"
                     }
                   ]
                 }
@@ -835,7 +754,7 @@
               "response": []
             },
             {
-              "name": "delete sub category",
+              "name": "delete brand",
               "request": {
                 "auth": {
                   "type": "bearer",
@@ -856,14 +775,14 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{url}}/api/admin/sub-category/{id}",
+                  "raw": "{{url}}/api/admin/brand/{id}",
                   "host": [
                     "{{url}}"
                   ],
                   "path": [
                     "api",
                     "admin",
-                    "sub-category",
+                    "brand",
                     "{id}"
                   ]
                 }
@@ -871,7 +790,53 @@
               "response": []
             },
             {
-              "name": "update sub category",
+              "name": "toogle brand feature",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/brand/{id}/toggle-featured-brand",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "brand",
+                    "{id}",
+                    "toggle-featured-brand"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Tags",
+          "item": [
+            {
+              "name": "store tags",
               "request": {
                 "auth": {
                   "type": "bearer",
@@ -896,47 +861,28 @@
                   "formdata": [
                     {
                       "key": "name",
-                      "value": "Bag",
+                      "value": "Laptop",
                       "type": "text",
-                      "uuid": "b9c32a85-5d83-4bcc-af6f-850f817755b3"
-                    },
-                    {
-                      "key": "category_image",
-                      "type": "file",
-                      "uuid": "585e0812-fa2d-48ae-9eed-c3717c42cf94",
-                      "src": "/C:/Users/Hanci/Downloads/473363709_122171439998267814_1702870369622799843_n.jpg"
-                    },
-                    {
-                      "key": "category_id",
-                      "value": "1",
-                      "type": "text",
-                      "uuid": "c59fcae1-6166-4ae0-8528-c44f6a446095"
-                    },
-                    {
-                      "key": "_method",
-                      "value": "PUT",
-                      "type": "text",
-                      "uuid": "043b9a0e-7b01-476c-bdd3-5c2efff7c924"
+                      "uuid": "9f7b3ac2-135c-4946-944e-1f76cfd4c32b"
                     }
                   ]
                 },
                 "url": {
-                  "raw": "{{url}}/api/admin/sub-category/{id}",
+                  "raw": "{{url}}/api/admin/tags",
                   "host": [
                     "{{url}}"
                   ],
                   "path": [
                     "api",
                     "admin",
-                    "sub-category",
-                    "{id}"
+                    "tags"
                   ]
                 }
               },
               "response": []
             },
             {
-              "name": "update popular sub category status",
+              "name": "update tags",
               "request": {
                 "auth": {
                   "type": "bearer",
@@ -960,24 +906,118 @@
                   "mode": "formdata",
                   "formdata": [
                     {
-                      "key": "is_popular",
-                      "value": "true",
+                      "key": "name",
+                      "value": "Laptop",
                       "type": "text",
-                      "uuid": "14e02785-e3c5-484e-a439-4960f1d6faec"
+                      "uuid": "9f7b3ac2-135c-4946-944e-1f76cfd4c32b"
+                    },
+                    {
+                      "key": "_method",
+                      "value": "PUT",
+                      "type": "text",
+                      "uuid": "cb2d67a5-a958-4814-92f0-3dc60d132854"
                     }
                   ]
                 },
                 "url": {
-                  "raw": "{{url}}/api/admin/sub-categories/{id}/toggle-popular",
+                  "raw": "{{url}}/api/admin/tags/{id}",
                   "host": [
                     "{{url}}"
                   ],
                   "path": [
                     "api",
                     "admin",
-                    "sub-categories",
-                    "{id}",
-                    "toggle-popular"
+                    "tags",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "show all tags",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/tags?pagination_limit=8&search_keyword",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "tags"
+                  ],
+                  "query": [
+                    {
+                      "key": "pagination_limit",
+                      "value": "8"
+                    },
+                    {
+                      "key": "search_keyword",
+                      "value": null,
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete tags",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/tags/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "tags",
+                    "{id}"
                   ]
                 }
               },
@@ -988,6 +1028,647 @@
         {
           "name": "Products",
           "item": [
+            {
+              "name": "store product",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "vendor-store-id",
+                    "value": "10",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "category_id",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "brand_id",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "534e7176-c51d-427b-a97f-8f50479bf989"
+                    },
+                    {
+                      "key": "name",
+                      "value": "Classic Cotton T-Shirt1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description",
+                      "value": "Soft and comfortable everyday t-shirt",
+                      "type": "text"
+                    },
+                    {
+                      "key": "short_description",
+                      "value": "100% cotton, available in multiple colors and sizes",
+                      "type": "text"
+                    },
+                    {
+                      "key": "price",
+                      "value": "29.99",
+                      "type": "text"
+                    },
+                    {
+                      "key": "compare_price",
+                      "value": "39.99",
+                      "type": "text"
+                    },
+                    {
+                      "key": "cost_price",
+                      "value": "12",
+                      "type": "text"
+                    },
+                    {
+                      "key": "stock",
+                      "value": "200",
+                      "type": "text"
+                    },
+                    {
+                      "key": "low_stock_threshold",
+                      "value": "5",
+                      "type": "text"
+                    },
+                    {
+                      "key": "manage_stock",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "ed25c3de-2970-416c-bd7f-e93b8f0ccb1a"
+                    },
+                    {
+                      "key": "sku",
+                      "value": "DS456568",
+                      "type": "text"
+                    },
+                    {
+                      "key": "product_image[0]",
+                      "type": "file",
+                      "uuid": "78e6c3a7-a51d-4774-aa86-921ffecc4640",
+                      "src": "/C:/Users/user/Videos/Screenshot 2025-08-23 191844.png"
+                    },
+                    {
+                      "key": "product_image[1]",
+                      "type": "file",
+                      "uuid": "4e6ea988-5a85-43ff-a22d-4b148e19a411",
+                      "src": "/C:/Users/user/Videos/Screenshot 2025-08-23 191851.png"
+                    },
+                    {
+                      "key": "tags[]",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "2af0b465-e3ba-4c5f-88ed-729d827f3e55"
+                    },
+                    {
+                      "key": "tags[]",
+                      "value": "2",
+                      "type": "text",
+                      "uuid": "301755a7-8839-41d4-a35c-e280a975f540"
+                    },
+                    {
+                      "key": "weight",
+                      "value": "0.5",
+                      "type": "text",
+                      "uuid": "740d4e2d-0efe-4a9b-b71d-bf626e357382"
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "090b395a-6350-4586-8afc-1f3371644541"
+                    },
+                    {
+                      "key": "is_featured",
+                      "value": "0",
+                      "type": "text",
+                      "uuid": "651ec1fd-728f-464e-b6a4-815a69361db2"
+                    },
+                    {
+                      "key": "meta_title",
+                      "value": "Classic Cotton T-Shirt",
+                      "type": "text",
+                      "uuid": "5962b601-eac0-4ad2-9bb9-a3c5a35ec5a5"
+                    },
+                    {
+                      "key": "meta_description",
+                      "value": "Buy our classic cotton t-shirt",
+                      "type": "text",
+                      "uuid": "bace31bf-33ef-41ad-98d7-7ddb05bf719a"
+                    },
+                    {
+                      "key": "variants[0][name]",
+                      "value": "Blue / L",
+                      "type": "text",
+                      "uuid": "4d5fe3e5-9026-4fa4-aacc-dcbe8d12c6e4"
+                    },
+                    {
+                      "key": "variants[0][sku]",
+                      "value": "TSH-001-BLU-",
+                      "type": "text",
+                      "uuid": "20782de3-1cb1-4a4f-80cf-ec5951d44391"
+                    },
+                    {
+                      "key": "variants[0][price]",
+                      "value": "31.99",
+                      "type": "text",
+                      "uuid": "8588c2b6-cadc-4874-9a07-45c057ea39d2"
+                    },
+                    {
+                      "key": "variants[0][stock]",
+                      "value": "10",
+                      "type": "text",
+                      "uuid": "b25b33ec-1f83-40fd-8b2a-9141d74ede70"
+                    },
+                    {
+                      "key": "variants[0][attributes][color]",
+                      "value": "blue",
+                      "type": "text",
+                      "uuid": "85a89a93-beed-448a-90b6-9926a1b13a1c"
+                    },
+                    {
+                      "key": "variants[0][attributes][size]",
+                      "value": "L",
+                      "type": "text",
+                      "uuid": "9c4f887f-cc20-49a9-9e1b-39ea82992e90"
+                    },
+                    {
+                      "key": "variant_images[0]",
+                      "type": "file",
+                      "uuid": "eaa027d2-8dd1-464b-8631-11e5d5960682",
+                      "src": "/C:/Users/user/Videos/WhatsApp Image 2026-01-14 at 11.22.51 PM.jpeg"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/products",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "products"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "store product",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                      },
+                      {
+                        "key": "vendor-store-id",
+                        "value": "10",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "category_id",
+                          "value": "1",
+                          "type": "text"
+                        },
+                        {
+                          "key": "brand_id",
+                          "value": "",
+                          "type": "text",
+                          "uuid": "534e7176-c51d-427b-a97f-8f50479bf989"
+                        },
+                        {
+                          "key": "name",
+                          "value": "Classic Cotton T-Shirt1",
+                          "type": "text"
+                        },
+                        {
+                          "key": "description",
+                          "value": "Soft and comfortable everyday t-shirt",
+                          "type": "text"
+                        },
+                        {
+                          "key": "short_description",
+                          "value": "100% cotton, available in multiple colors and sizes",
+                          "type": "text"
+                        },
+                        {
+                          "key": "price",
+                          "value": "29.99",
+                          "type": "text"
+                        },
+                        {
+                          "key": "compare_price",
+                          "value": "39.99",
+                          "type": "text"
+                        },
+                        {
+                          "key": "cost_price",
+                          "value": "12",
+                          "type": "text"
+                        },
+                        {
+                          "key": "stock",
+                          "value": "200",
+                          "type": "text"
+                        },
+                        {
+                          "key": "low_stock_threshold",
+                          "value": "5",
+                          "type": "text"
+                        },
+                        {
+                          "key": "manage_stock",
+                          "value": "1",
+                          "type": "text",
+                          "uuid": "ed25c3de-2970-416c-bd7f-e93b8f0ccb1a"
+                        },
+                        {
+                          "key": "sku",
+                          "value": "DS456568",
+                          "type": "text"
+                        },
+                        {
+                          "key": "product_image[0]",
+                          "type": "file",
+                          "uuid": "78e6c3a7-a51d-4774-aa86-921ffecc4640",
+                          "src": "/C:/Users/user/Videos/Screenshot 2025-08-23 191844.png"
+                        },
+                        {
+                          "key": "product_image[1]",
+                          "type": "file",
+                          "uuid": "4e6ea988-5a85-43ff-a22d-4b148e19a411",
+                          "src": "/C:/Users/user/Videos/Screenshot 2025-08-23 191851.png"
+                        },
+                        {
+                          "key": "tags[]",
+                          "value": "1",
+                          "type": "text",
+                          "uuid": "2af0b465-e3ba-4c5f-88ed-729d827f3e55"
+                        },
+                        {
+                          "key": "tags[]",
+                          "value": "2",
+                          "type": "text",
+                          "uuid": "301755a7-8839-41d4-a35c-e280a975f540"
+                        },
+                        {
+                          "key": "weight",
+                          "value": "0.5",
+                          "type": "text",
+                          "uuid": "740d4e2d-0efe-4a9b-b71d-bf626e357382"
+                        },
+                        {
+                          "key": "is_active",
+                          "value": "1",
+                          "type": "text",
+                          "uuid": "090b395a-6350-4586-8afc-1f3371644541"
+                        },
+                        {
+                          "key": "is_featured",
+                          "value": "0",
+                          "type": "text",
+                          "uuid": "651ec1fd-728f-464e-b6a4-815a69361db2"
+                        },
+                        {
+                          "key": "meta_title",
+                          "value": "Classic Cotton T-Shirt",
+                          "type": "text",
+                          "uuid": "5962b601-eac0-4ad2-9bb9-a3c5a35ec5a5"
+                        },
+                        {
+                          "key": "meta_description",
+                          "value": "Buy our classic cotton t-shirt",
+                          "type": "text",
+                          "uuid": "bace31bf-33ef-41ad-98d7-7ddb05bf719a"
+                        },
+                        {
+                          "key": "variants[0][name]",
+                          "value": "Blue / L",
+                          "type": "text",
+                          "uuid": "4d5fe3e5-9026-4fa4-aacc-dcbe8d12c6e4"
+                        },
+                        {
+                          "key": "variants[0][sku]",
+                          "value": "TSH-001-BLU-",
+                          "type": "text",
+                          "uuid": "20782de3-1cb1-4a4f-80cf-ec5951d44391"
+                        },
+                        {
+                          "key": "variants[0][price]",
+                          "value": "31.99",
+                          "type": "text",
+                          "uuid": "8588c2b6-cadc-4874-9a07-45c057ea39d2"
+                        },
+                        {
+                          "key": "variants[0][stock]",
+                          "value": "10",
+                          "type": "text",
+                          "uuid": "b25b33ec-1f83-40fd-8b2a-9141d74ede70"
+                        },
+                        {
+                          "key": "variants[0][attributes][color]",
+                          "value": "blue",
+                          "type": "text",
+                          "uuid": "85a89a93-beed-448a-90b6-9926a1b13a1c"
+                        },
+                        {
+                          "key": "variants[0][attributes][size]",
+                          "value": "L",
+                          "type": "text",
+                          "uuid": "9c4f887f-cc20-49a9-9e1b-39ea82992e90"
+                        },
+                        {
+                          "key": "variant_images[0]",
+                          "type": "file",
+                          "uuid": "eaa027d2-8dd1-464b-8631-11e5d5960682",
+                          "src": "/C:/Users/user/Videos/WhatsApp Image 2026-01-14 at 11.22.51 PM.jpeg"
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "{{url}}/api/admin/products",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "api",
+                        "admin",
+                        "products"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Host",
+                      "value": "127.0.0.1:8000"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "close"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "PHP/8.3.0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, private"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 26 Mar 2026 09:19:36 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"data\": {\n        \"id\": 5,\n        \"category_id\": \"1\",\n        \"brand_id\": null,\n        \"name\": \"Classic Cotton T-Shirt1\",\n        \"slug\": \"classic-cotton-t-shirt1\",\n        \"sku\": \"DS456568\",\n        \"short_description\": \"100% cotton, available in multiple colors and sizes\",\n        \"description\": \"Soft and comfortable everyday t-shirt\",\n        \"price\": \"29.99\",\n        \"compare_price\": \"39.99\",\n        \"cost_price\": \"12.00\",\n        \"stock\": \"200\",\n        \"low_stock_threshold\": \"5\",\n        \"manage_stock\": true,\n        \"weight\": \"0.5\",\n        \"is_active\": true,\n        \"is_featured\": false,\n        \"meta_title\": \"Classic Cotton T-Shirt\",\n        \"meta_description\": \"Buy our classic cotton t-shirt\",\n        \"sales_count\": null,\n        \"average_rating\": null,\n        \"review_count\": null,\n        \"published_at\": null,\n        \"created_at\": \"26th Mar 2026\",\n        \"product_images\": [\n            {\n                \"id\": 4,\n                \"url\": \"https://6863edaac5ba98c83f1c72723c7522e8.r2.cloudflarestorage.com/testingbucket/4/Screenshot-2025-08-23-191844.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=833b89db2cc88356c4b03155a1ca5fc6%2F20260326%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260326T091936Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=afdb6f35a6a385afe5347f3bd4118dedc56fc091d65725b6d312c6a565779f1c\",\n                \"file_name\": \"Screenshot-2025-08-23-191844.png\",\n                \"mime_type\": \"image/jpeg\",\n                \"size\": 35972,\n                \"order\": 1\n            },\n            {\n                \"id\": 5,\n                \"url\": \"https://6863edaac5ba98c83f1c72723c7522e8.r2.cloudflarestorage.com/testingbucket/5/Screenshot-2025-08-23-191851.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=833b89db2cc88356c4b03155a1ca5fc6%2F20260326%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260326T091936Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=a4182a598faecc8382532a322ea4359106351a9ebe4b9e63598926dc91f53961\",\n                \"file_name\": \"Screenshot-2025-08-23-191851.png\",\n                \"mime_type\": \"image/jpeg\",\n                \"size\": 48207,\n                \"order\": 2\n            }\n        ],\n        \"category\": {\n            \"id\": 1,\n            \"parent_id\": null,\n            \"name\": \"Drink\",\n            \"slug\": \"drink\",\n            \"description\": null,\n            \"meta_title\": null,\n            \"meta_description\": null,\n            \"sort_order\": 0,\n            \"is_active\": 0,\n            \"image\": null,\n            \"created_at\": \"26th Mar 2026\"\n        },\n        \"brand\": null,\n        \"variants\": [\n            {\n                \"id\": 2,\n                \"product_id\": 5,\n                \"name\": \"Blue / L\",\n                \"sku\": \"TSH-001-BLU-\",\n                \"price\": \"31.99\",\n                \"stock\": 10,\n                \"attributes\": {\n                    \"size\": \"L\",\n                    \"color\": \"blue\"\n                },\n                \"is_active\": true,\n                \"image\": \"https://6863edaac5ba98c83f1c72723c7522e8.r2.cloudflarestorage.com/testingbucket/3/WhatsApp-Image-2026-01-14-at-11.22.51-PM.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=833b89db2cc88356c4b03155a1ca5fc6%2F20260326%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260326T091936Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=28daf9f7c7cb6df78f13db6911d850912040936e5952990027b528162882238a\"\n            }\n        ],\n        \"tags\": [\n            {\n                \"id\": 1,\n                \"name\": \"Mobile\",\n                \"slug\": \"mobile\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Laptop\",\n                \"slug\": \"laptop\"\n            }\n        ]\n    },\n    \"message\": \"Product created successfully!\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "update product Copy",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "vendor-store-id",
+                    "value": "10",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "category_id",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "brand_id",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "534e7176-c51d-427b-a97f-8f50479bf989"
+                    },
+                    {
+                      "key": "name",
+                      "value": "Classic Cotton T-Shirt1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description",
+                      "value": "Soft and comfortable everyday t-shirt",
+                      "type": "text"
+                    },
+                    {
+                      "key": "short_description",
+                      "value": "100% cotton, available in multiple colors and sizes",
+                      "type": "text"
+                    },
+                    {
+                      "key": "price",
+                      "value": "29.99",
+                      "type": "text"
+                    },
+                    {
+                      "key": "compare_price",
+                      "value": "39.99",
+                      "type": "text"
+                    },
+                    {
+                      "key": "cost_price",
+                      "value": "12",
+                      "type": "text"
+                    },
+                    {
+                      "key": "stock",
+                      "value": "200",
+                      "type": "text"
+                    },
+                    {
+                      "key": "low_stock_threshold",
+                      "value": "5",
+                      "type": "text"
+                    },
+                    {
+                      "key": "manage_stock",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "ed25c3de-2970-416c-bd7f-e93b8f0ccb1a"
+                    },
+                    {
+                      "key": "sku",
+                      "value": "DS456568",
+                      "type": "text"
+                    },
+                    {
+                      "key": "product_image[0]",
+                      "type": "file",
+                      "uuid": "78e6c3a7-a51d-4774-aa86-921ffecc4640",
+                      "src": "/C:/Users/user/Videos/Screenshot 2025-08-23 191844.png"
+                    },
+                    {
+                      "key": "product_image[1]",
+                      "type": "file",
+                      "uuid": "4e6ea988-5a85-43ff-a22d-4b148e19a411",
+                      "src": "/C:/Users/user/Videos/Screenshot 2025-08-23 191851.png"
+                    },
+                    {
+                      "key": "tags[]",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "2af0b465-e3ba-4c5f-88ed-729d827f3e55"
+                    },
+                    {
+                      "key": "tags[]",
+                      "value": "2",
+                      "type": "text",
+                      "uuid": "301755a7-8839-41d4-a35c-e280a975f540"
+                    },
+                    {
+                      "key": "weight",
+                      "value": "0.5",
+                      "type": "text",
+                      "uuid": "740d4e2d-0efe-4a9b-b71d-bf626e357382"
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "090b395a-6350-4586-8afc-1f3371644541"
+                    },
+                    {
+                      "key": "is_featured",
+                      "value": "0",
+                      "type": "text",
+                      "uuid": "651ec1fd-728f-464e-b6a4-815a69361db2"
+                    },
+                    {
+                      "key": "meta_title",
+                      "value": "Classic Cotton T-Shirt",
+                      "type": "text",
+                      "uuid": "5962b601-eac0-4ad2-9bb9-a3c5a35ec5a5"
+                    },
+                    {
+                      "key": "meta_description",
+                      "value": "Buy our classic cotton t-shirt",
+                      "type": "text",
+                      "uuid": "bace31bf-33ef-41ad-98d7-7ddb05bf719a"
+                    },
+                    {
+                      "key": "variants[0][name]",
+                      "value": "Blue / L",
+                      "type": "text",
+                      "uuid": "4d5fe3e5-9026-4fa4-aacc-dcbe8d12c6e4"
+                    },
+                    {
+                      "key": "variants[0][sku]",
+                      "value": "TSH-001-BLU-",
+                      "type": "text",
+                      "uuid": "20782de3-1cb1-4a4f-80cf-ec5951d44391"
+                    },
+                    {
+                      "key": "variants[0][price]",
+                      "value": "31.99",
+                      "type": "text",
+                      "uuid": "8588c2b6-cadc-4874-9a07-45c057ea39d2"
+                    },
+                    {
+                      "key": "variants[0][stock]",
+                      "value": "10",
+                      "type": "text",
+                      "uuid": "b25b33ec-1f83-40fd-8b2a-9141d74ede70"
+                    },
+                    {
+                      "key": "variants[0][attributes][color]",
+                      "value": "blue",
+                      "type": "text",
+                      "uuid": "85a89a93-beed-448a-90b6-9926a1b13a1c"
+                    },
+                    {
+                      "key": "variants[0][attributes][size]",
+                      "value": "L",
+                      "type": "text",
+                      "uuid": "9c4f887f-cc20-49a9-9e1b-39ea82992e90"
+                    },
+                    {
+                      "key": "variant_images[0]",
+                      "type": "file",
+                      "uuid": "eaa027d2-8dd1-464b-8631-11e5d5960682",
+                      "src": "/C:/Users/user/Videos/WhatsApp Image 2026-01-14 at 11.22.51 PM.jpeg"
+                    },
+                    {
+                      "key": "_method",
+                      "value": "PUT",
+                      "type": "text",
+                      "uuid": "370fe050-30b8-43c5-9705-d414fcd2cc34"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/products/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "products",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            },
             {
               "name": "show all products",
               "request": {
@@ -1010,7 +1691,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{url}}/api/admin/products",
+                  "raw": "{{url}}/api/admin/products?pagination_limit=8&search_keyword=&is_active=1&category=1&brand=",
                   "host": [
                     "{{url}}"
                   ],
@@ -1022,43 +1703,23 @@
                   "query": [
                     {
                       "key": "pagination_limit",
-                      "value": null,
-                      "disabled": true
+                      "value": "8"
                     },
                     {
                       "key": "search_keyword",
-                      "value": null,
-                      "disabled": true
+                      "value": ""
                     },
                     {
-                      "key": "status",
-                      "value": "active",
-                      "disabled": true
+                      "key": "is_active",
+                      "value": "1"
                     },
                     {
                       "key": "category",
-                      "value": "1",
-                      "disabled": true
+                      "value": "1"
                     },
                     {
-                      "key": "sub_category",
-                      "value": "1",
-                      "disabled": true
-                    },
-                    {
-                      "key": "brand_id",
-                      "value": null,
-                      "disabled": true
-                    },
-                    {
-                      "key": "vendor_store_id",
-                      "value": null,
-                      "disabled": true
-                    },
-                    {
-                      "key": "handling_tag_id",
-                      "value": null,
-                      "disabled": true
+                      "key": "brand",
+                      "value": ""
                     }
                   ]
                 }
@@ -1126,8 +1787,8 @@
                   "mode": "formdata",
                   "formdata": [
                     {
-                      "key": "status",
-                      "value": "active",
+                      "key": "is_active",
+                      "value": "1",
                       "type": "text",
                       "uuid": "5a639f03-12d5-4cb8-b133-25eadb4e7a3e"
                     },
@@ -1140,15 +1801,15 @@
                   ]
                 },
                 "url": {
-                  "raw": "{{url}}/api/vendor/product-update-status/{product_id}",
+                  "raw": "{{url}}/api/admin/product-update-status/{id}",
                   "host": [
                     "{{url}}"
                   ],
                   "path": [
                     "api",
-                    "vendor",
+                    "admin",
                     "product-update-status",
-                    "{product_id}"
+                    "{id}"
                   ]
                 }
               },
@@ -1235,277 +1896,6 @@
               "response": []
             },
             {
-              "name": "store product",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  },
-                  {
-                    "key": "vendor-store-id",
-                    "value": "10",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "category_id",
-                      "value": "1",
-                      "type": "text"
-                    },
-                    {
-                      "key": "sub_category_id",
-                      "value": "1",
-                      "type": "text"
-                    },
-                    {
-                      "key": "name",
-                      "value": "Laptop 2567",
-                      "type": "text"
-                    },
-                    {
-                      "key": "description",
-                      "value": "Raw organic honey from Himalayas",
-                      "type": "text"
-                    },
-                    {
-                      "key": "short_description",
-                      "value": "100% pure and organic",
-                      "type": "text"
-                    },
-                    {
-                      "key": "sale_price",
-                      "value": "1000",
-                      "type": "text"
-                    },
-                    {
-                      "key": "cross_price",
-                      "value": "1500",
-                      "type": "text"
-                    },
-                    {
-                      "key": "cost_price",
-                      "value": "590",
-                      "type": "text"
-                    },
-                    {
-                      "key": "stock_quantity",
-                      "value": "200",
-                      "type": "text"
-                    },
-                    {
-                      "key": "product_weight",
-                      "value": "500 gm",
-                      "type": "text"
-                    },
-                    {
-                      "key": "sku",
-                      "value": "DSAFDQj",
-                      "type": "text"
-                    },
-                    {
-                      "key": "product_image[]",
-                      "type": "file",
-                      "uuid": "78e6c3a7-a51d-4774-aa86-921ffecc4640",
-                      "src": "/C:/Users/user/Pictures/438137391_1122105715811998_6688188462483770402_n.png"
-                    },
-                    {
-                      "key": "product_image[]",
-                      "type": "file",
-                      "uuid": "4e6ea988-5a85-43ff-a22d-4b148e19a411",
-                      "src": "/C:/Users/user/Pictures/115-1152580_related-image-hot-drinks-png.png"
-                    },
-                    {
-                      "key": "handling_tags[]",
-                      "value": "1",
-                      "type": "text",
-                      "uuid": "2af0b465-e3ba-4c5f-88ed-729d827f3e55"
-                    },
-                    {
-                      "key": "handling_tags[]",
-                      "value": "2",
-                      "type": "text",
-                      "uuid": "301755a7-8839-41d4-a35c-e280a975f540"
-                    },
-                    {
-                      "key": "product_unit_id",
-                      "value": "1",
-                      "type": "text",
-                      "uuid": "8c48c265-31d6-4cc6-a76e-58425594fa4d"
-                    }
-                  ]
-                },
-                "url": {
-                  "raw": "{{url}}/api/admin/products",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "products"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "update product",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  },
-                  {
-                    "key": "vendor-store-id",
-                    "value": "10",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "category_id",
-                      "value": "1",
-                      "type": "text"
-                    },
-                    {
-                      "key": "sub_category_id",
-                      "value": "1",
-                      "type": "text"
-                    },
-                    {
-                      "key": "brand_id",
-                      "value": "1",
-                      "type": "text"
-                    },
-                    {
-                      "key": "name",
-                      "value": "Laptop",
-                      "type": "text"
-                    },
-                    {
-                      "key": "description",
-                      "value": "Raw organic honey from Himalayas",
-                      "type": "text"
-                    },
-                    {
-                      "key": "short_description",
-                      "value": "100% pure and organic",
-                      "type": "text"
-                    },
-                    {
-                      "key": "selling_price",
-                      "value": "1000",
-                      "type": "text"
-                    },
-                    {
-                      "key": "cross_price",
-                      "value": "1500",
-                      "type": "text"
-                    },
-                    {
-                      "key": "unit_price",
-                      "value": "590",
-                      "type": "text"
-                    },
-                    {
-                      "key": "stock_quantity",
-                      "value": "200",
-                      "type": "text"
-                    },
-                    {
-                      "key": "product_weight",
-                      "value": "500 gm",
-                      "type": "text"
-                    },
-                    {
-                      "key": "sku",
-                      "value": "DSAFDSD",
-                      "type": "text"
-                    },
-                    {
-                      "key": "product_image[]",
-                      "type": "file",
-                      "uuid": "78e6c3a7-a51d-4774-aa86-921ffecc4640",
-                      "src": "/Users/hanciephago/Downloads/Black and Red Simple Car Icon Industrial Logo (6).png"
-                    },
-                    {
-                      "key": "handling_tags[]",
-                      "value": "1",
-                      "type": "text",
-                      "uuid": "2af0b465-e3ba-4c5f-88ed-729d827f3e55"
-                    },
-                    {
-                      "key": "handling_tags[]",
-                      "value": "2",
-                      "type": "text",
-                      "uuid": "301755a7-8839-41d4-a35c-e280a975f540"
-                    },
-                    {
-                      "key": "vendor_store_id",
-                      "value": "10",
-                      "type": "text",
-                      "uuid": "8c48c265-31d6-4cc6-a76e-58425594fa4d"
-                    },
-                    {
-                      "key": "vendor_store_id",
-                      "value": "1",
-                      "type": "text",
-                      "uuid": "04a7077f-5d95-48c1-ae77-bdddb83fc116"
-                    },
-                    {
-                      "key": "_method",
-                      "value": "PUT",
-                      "type": "text",
-                      "uuid": "5e9bfc3b-841b-4de9-a828-36d874b5b2a4"
-                    }
-                  ]
-                },
-                "url": {
-                  "raw": "{{url}}/api/admin/products",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "products"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
               "name": "show short product list",
               "request": {
                 "auth": {
@@ -1570,7 +1960,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"products\": [\n    {\n      \"id\": 37,\n      \"selling_price\": 799,\n      \"cross_price\": 999\n    },\n    {\n      \"id\": 38,\n      \"selling_price\": 499,\n      \"cross_price\": 999\n    }\n  ]\n}\n",
+                  "raw": "{\n    \"products\": [\n        {\n            \"id\": 4,\n            \"price\": 150000,\n            \"compare_price\": 200000,\n            \"cost_price\": 100000\n        },\n        {\n            \"id\": 5,\n            \"cost_price\": 50000\n        }\n    ]\n}\n",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -1594,10 +1984,10 @@
           ]
         },
         {
-          "name": "Contact Us",
+          "name": "Site Settings",
           "item": [
             {
-              "name": "show all contact us list",
+              "name": "store site settings",
               "request": {
                 "auth": {
                   "type": "bearer",
@@ -1609,7 +1999,7 @@
                     }
                   ]
                 },
-                "method": "GET",
+                "method": "POST",
                 "header": [
                   {
                     "key": "Accept",
@@ -1617,75 +2007,159 @@
                     "type": "text"
                   }
                 ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "website_title",
+                      "value": "Cartyne",
+                      "type": "text",
+                      "uuid": "6748f6f0-7f9f-4875-a6e0-9a0f8403bd9e"
+                    },
+                    {
+                      "key": "logo",
+                      "type": "file",
+                      "uuid": "26fcbf33-ad00-4b2b-b351-706bc651f36c",
+                      "src": "/C:/Users/user/Pictures/1600w-ZBxBTP6Lc-E.webp"
+                    },
+                    {
+                      "key": "address",
+                      "value": "KTM",
+                      "type": "text",
+                      "uuid": "fd3083be-31e5-46c5-9938-563933e11d9d"
+                    },
+                    {
+                      "key": "contact_no",
+                      "value": "9825915122",
+                      "type": "text",
+                      "uuid": "17f03ca2-c469-4af2-8e4b-16e07041208e"
+                    },
+                    {
+                      "key": "home_page_banner_1",
+                      "type": "file",
+                      "uuid": "23f17565-0b93-4ce6-bd3d-530e666b2997",
+                      "value": ""
+                    },
+                    {
+                      "key": "home_page_banner_2",
+                      "type": "file",
+                      "uuid": "fc380774-2c39-4ecd-8844-aad007e6817f",
+                      "src": "/C:/Users/user/Pictures/50-507302_download-beer-bottle-png-clipart.png"
+                    },
+                    {
+                      "key": "home_page_banner_3",
+                      "type": "file",
+                      "uuid": "db8daa58-404f-4656-a964-d5a1684197b4",
+                      "src": "/C:/Users/user/Pictures/360_F_491766294_h4j7LbW2YgfbNHhq7F8GboIc1XyBSEY5.jpg"
+                    },
+                    {
+                      "key": "privacy_policy",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "5a8fb28a-7e89-42d3-bfe2-3412f786abb2"
+                    },
+                    {
+                      "key": "terms_conditions",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "64be7628-52fb-4e0f-8d58-f2fc786ef042"
+                    },
+                    {
+                      "key": "facebook_link",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "d05216f0-c630-4c6f-a1cf-db861407253c"
+                    },
+                    {
+                      "key": "instagram_link",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "d344490a-e5bb-4e1a-9f08-6f198fbf95d0"
+                    },
+                    {
+                      "key": "tiktok_link",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "802acc92-901e-44d2-825e-6983c5878e27"
+                    },
+                    {
+                      "key": "whatsapp_number",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "3c4cc0b4-deca-450b-a269-cf78bd44c7dd"
+                    },
+                    {
+                      "key": "footer_background_color",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "76fc5e7f-4d19-4f1d-88f5-868c617041ea"
+                    },
+                    {
+                      "key": "footer_text_color",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "4a80400e-ab0d-4681-81d9-cd5300583d86"
+                    },
+                    {
+                      "key": "primary_nav_background_color",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "4f074a2d-f5f9-43f9-b225-0c683a5a7679"
+                    },
+                    {
+                      "key": "primary_nav_text_color",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "44e05f9f-1447-485a-81ae-3ca85896e60d"
+                    },
+                    {
+                      "key": "secondary_nav_background_color",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "33dc5ed0-11b0-4e0f-83f9-c87154f5d281"
+                    },
+                    {
+                      "key": "secondary_nav_text_color",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "56b05344-3b75-473f-a414-e8aea2af151a"
+                    },
+                    {
+                      "key": "email",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "413d8af0-96a1-4625-8d34-28f5b9034a96"
+                    },
+                    {
+                      "key": "about_us",
+                      "value": "hy",
+                      "type": "text",
+                      "uuid": "3a1903f7-a03b-4413-8b88-75dfb4737a9d"
+                    },
+                    {
+                      "key": "fav_icon",
+                      "type": "file",
+                      "uuid": "a7c39fb7-f1cf-478f-a98f-f798086d60e4",
+                      "src": "/C:/Users/user/Pictures/50-507302_download-beer-bottle-png-clipart.png"
+                    }
+                  ]
+                },
                 "url": {
-                  "raw": "{{url}}/api/admin/contact-us?pagination_limit=8&search_keyword",
+                  "raw": "{{url}}/api/admin/site-settings",
                   "host": [
                     "{{url}}"
                   ],
                   "path": [
                     "api",
                     "admin",
-                    "contact-us"
-                  ],
-                  "query": [
-                    {
-                      "key": "pagination_limit",
-                      "value": "8",
-                      "type": "text"
-                    },
-                    {
-                      "key": "search_keyword",
-                      "value": null,
-                      "type": "text"
-                    }
+                    "site-settings"
                   ]
                 }
               },
               "response": []
             },
             {
-              "name": "delete contact us",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{url}}/api/admin/contact-us/{id}",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "contact-us",
-                    "{id}"
-                  ]
-                }
-              },
-              "response": []
-            }
-          ]
-        },
-        {
-          "name": "News Letter",
-          "item": [
-            {
-              "name": "show all news letter",
+              "name": "show site setting data",
               "request": {
                 "auth": {
                   "type": "bearer",
@@ -1706,14 +2180,14 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{url}}/api/admin/newsletters",
+                  "raw": "{{url}}/api/admin/site-settings",
                   "host": [
                     "{{url}}"
                   ],
                   "path": [
                     "api",
                     "admin",
-                    "newsletters"
+                    "site-settings"
                   ]
                 }
               },
@@ -1912,6 +2386,758 @@
                     "api",
                     "admin",
                     "faqs",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Contact Us",
+          "item": [
+            {
+              "name": "show all contact us list",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/contact-us?pagination_limit=8&search_keyword",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "contact-us"
+                  ],
+                  "query": [
+                    {
+                      "key": "pagination_limit",
+                      "value": "8",
+                      "type": "text"
+                    },
+                    {
+                      "key": "search_keyword",
+                      "value": null,
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete contact us",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/contact-us/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "contact-us",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "News Letter",
+          "item": [
+            {
+              "name": "show all news letter",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/newsletters",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "newsletters"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Banner",
+          "item": [
+            {
+              "name": "store banner data",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "title",
+                      "value": "Summer Sale",
+                      "type": "text",
+                      "uuid": "986da8d7-3080-4d9e-b978-1fc4736fe7f7"
+                    },
+                    {
+                      "key": "subtitle",
+                      "value": "Up to 50% off",
+                      "type": "text",
+                      "uuid": "6cd2b326-c739-4370-9bec-a1b522d40783"
+                    },
+                    {
+                      "key": "link",
+                      "value": "https://example.com/sale",
+                      "type": "text",
+                      "uuid": "5e0838ce-bc4a-4011-ac22-8d8033329121"
+                    },
+                    {
+                      "key": "button_text",
+                      "value": "Shop Now",
+                      "type": "text",
+                      "uuid": "0e60c8a7-7a31-4738-a6aa-d34cb181dd45"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "29b77bf2-0c7f-412e-9297-dc9f89801ee6"
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "24ef5b06-f4ec-422f-85aa-c5d87eb81f99"
+                    },
+                    {
+                      "key": "starts_at",
+                      "value": "2026-03-26",
+                      "type": "text",
+                      "uuid": "97e3260e-d2d0-476f-8f4d-c66fba82bf3d"
+                    },
+                    {
+                      "key": "ends_at",
+                      "value": "2026-04-30",
+                      "type": "text",
+                      "uuid": "b2af005d-772d-405c-9e8c-5f02997d63a5"
+                    },
+                    {
+                      "key": "banner_image",
+                      "type": "file",
+                      "uuid": "dbd5502c-0f3f-4e81-aadb-fb60b095e3bb",
+                      "src": "/C:/Users/user/Pictures/5433-scaled.jpg"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/banners",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "banners"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update banner data",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "title",
+                      "value": "Summer Sale",
+                      "type": "text",
+                      "uuid": "986da8d7-3080-4d9e-b978-1fc4736fe7f7"
+                    },
+                    {
+                      "key": "subtitle",
+                      "value": "Up to 50% off",
+                      "type": "text",
+                      "uuid": "6cd2b326-c739-4370-9bec-a1b522d40783"
+                    },
+                    {
+                      "key": "link",
+                      "value": "https://example.com/sale",
+                      "type": "text",
+                      "uuid": "5e0838ce-bc4a-4011-ac22-8d8033329121"
+                    },
+                    {
+                      "key": "button_text",
+                      "value": "Shop Now",
+                      "type": "text",
+                      "uuid": "0e60c8a7-7a31-4738-a6aa-d34cb181dd45"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "29b77bf2-0c7f-412e-9297-dc9f89801ee6"
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "24ef5b06-f4ec-422f-85aa-c5d87eb81f99"
+                    },
+                    {
+                      "key": "starts_at",
+                      "value": "2026-03-26",
+                      "type": "text",
+                      "uuid": "97e3260e-d2d0-476f-8f4d-c66fba82bf3d"
+                    },
+                    {
+                      "key": "ends_at",
+                      "value": "2026-04-30",
+                      "type": "text",
+                      "uuid": "b2af005d-772d-405c-9e8c-5f02997d63a5"
+                    },
+                    {
+                      "key": "banner_image",
+                      "type": "file",
+                      "uuid": "dbd5502c-0f3f-4e81-aadb-fb60b095e3bb",
+                      "src": "/C:/Users/user/Pictures/5433-scaled.jpg"
+                    },
+                    {
+                      "key": "_method",
+                      "value": "PUT",
+                      "type": "text",
+                      "uuid": "8dbd87ba-9971-4f42-a668-448e0e33a664"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/banners/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "banners",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "show all banner data",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/banners?pagination_limit=8",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "banners"
+                  ],
+                  "query": [
+                    {
+                      "key": "pagination_limit",
+                      "value": "8",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete banner image",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/banners/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "banners",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Coupen",
+          "item": [
+            {
+              "name": "store coupen",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "code",
+                      "value": "SAVE20",
+                      "type": "text",
+                      "uuid": "bda342a5-ae76-48b0-a40b-989d81fc94e1"
+                    },
+                    {
+                      "key": "type",
+                      "value": "fixed",
+                      "type": "text",
+                      "uuid": "ae46452d-28ad-4fa4-8f23-644d4734402d"
+                    },
+                    {
+                      "key": "value",
+                      "value": "20",
+                      "type": "text",
+                      "uuid": "89b49b00-9de7-4666-a0c4-bd9b32f58565"
+                    },
+                    {
+                      "key": "description",
+                      "value": "Get $20 off your order",
+                      "type": "text",
+                      "uuid": "44b81dc6-19d2-4d20-9e6e-25ece7993331"
+                    },
+                    {
+                      "key": "min_order_amount",
+                      "value": "100",
+                      "type": "text",
+                      "uuid": "1fd29930-9d48-4585-83bd-b81777c26e2f"
+                    },
+                    {
+                      "key": "max_discount_amount",
+                      "value": "50",
+                      "type": "text",
+                      "uuid": "b4a6252d-e470-4355-9f00-a86d1fffa836"
+                    },
+                    {
+                      "key": "usage_limit",
+                      "value": "500",
+                      "type": "text",
+                      "uuid": "a18154bd-5f8f-4584-be79-c8962ab8a380"
+                    },
+                    {
+                      "key": "usage_limit_per_user",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "dff65767-2b96-48fc-8053-7b4917d2c4b5"
+                    },
+                    {
+                      "key": "starts_at",
+                      "value": "2026-03-26",
+                      "type": "text",
+                      "uuid": "fe0f224d-c013-4681-a7c8-3d94c2b7ef2c"
+                    },
+                    {
+                      "key": "expires_at",
+                      "value": "2026-04-30",
+                      "type": "text",
+                      "uuid": "f4f3c026-e371-4a97-abac-ecdf946e0c3a"
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "b02091cb-ce03-487f-b294-329e5dc46a3a"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/coupons",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "coupons"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "show all coupens",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/coupons?pagination_limit=8&search_keyword&is_active=1",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "coupons"
+                  ],
+                  "query": [
+                    {
+                      "key": "pagination_limit",
+                      "value": "8"
+                    },
+                    {
+                      "key": "search_keyword",
+                      "value": null
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "1",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update coupen",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "code",
+                      "value": "SAVE20",
+                      "type": "text",
+                      "uuid": "bda342a5-ae76-48b0-a40b-989d81fc94e1"
+                    },
+                    {
+                      "key": "type",
+                      "value": "fixed",
+                      "type": "text",
+                      "uuid": "ae46452d-28ad-4fa4-8f23-644d4734402d"
+                    },
+                    {
+                      "key": "value",
+                      "value": "20",
+                      "type": "text",
+                      "uuid": "89b49b00-9de7-4666-a0c4-bd9b32f58565"
+                    },
+                    {
+                      "key": "description",
+                      "value": "Get $20 off your order",
+                      "type": "text",
+                      "uuid": "44b81dc6-19d2-4d20-9e6e-25ece7993331"
+                    },
+                    {
+                      "key": "min_order_amount",
+                      "value": "100",
+                      "type": "text",
+                      "uuid": "1fd29930-9d48-4585-83bd-b81777c26e2f"
+                    },
+                    {
+                      "key": "max_discount_amount",
+                      "value": "50",
+                      "type": "text",
+                      "uuid": "b4a6252d-e470-4355-9f00-a86d1fffa836"
+                    },
+                    {
+                      "key": "usage_limit",
+                      "value": "500",
+                      "type": "text",
+                      "uuid": "a18154bd-5f8f-4584-be79-c8962ab8a380"
+                    },
+                    {
+                      "key": "usage_limit_per_user",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "dff65767-2b96-48fc-8053-7b4917d2c4b5"
+                    },
+                    {
+                      "key": "starts_at",
+                      "value": "2026-03-26",
+                      "type": "text",
+                      "uuid": "fe0f224d-c013-4681-a7c8-3d94c2b7ef2c"
+                    },
+                    {
+                      "key": "expires_at",
+                      "value": "2026-04-30",
+                      "type": "text",
+                      "uuid": "f4f3c026-e371-4a97-abac-ecdf946e0c3a"
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "b02091cb-ce03-487f-b294-329e5dc46a3a"
+                    },
+                    {
+                      "key": "_method",
+                      "value": "PUT",
+                      "type": "text",
+                      "uuid": "167ea783-7bb6-46a1-b446-2dcd4e00ed3c"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/coupons/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "coupons",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "show single coupen data",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/coupons/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "coupons",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete coupen",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/coupons/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "coupons",
                     "{id}"
                   ]
                 }
@@ -2561,6 +3787,14 @@
                 }
               },
               "response": []
+            },
+            {
+              "name": "New Request",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": []
             }
           ]
         },
@@ -2972,673 +4206,6 @@
           ]
         },
         {
-          "name": "Product Handling Tag",
-          "item": [
-            {
-              "name": "show product handling tags list",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{url}}/api/admin/product-handling-tags?pagination_limit=8&search_keyword",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "product-handling-tags"
-                  ],
-                  "query": [
-                    {
-                      "key": "pagination_limit",
-                      "value": "8",
-                      "type": "text"
-                    },
-                    {
-                      "key": "search_keyword",
-                      "value": null,
-                      "type": "text"
-                    }
-                  ]
-                }
-              },
-              "response": []
-            }
-          ]
-        },
-        {
-          "name": "Product Badge",
-          "item": [
-            {
-              "name": "list product badges",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{url}}/api/admin/product-badges?pagination_limit=8&search_keyword",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "product-badges"
-                  ],
-                  "query": [
-                    {
-                      "key": "pagination_limit",
-                      "value": "8"
-                    },
-                    {
-                      "key": "search_keyword",
-                      "value": null
-                    }
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "show product badges data",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{url}}/api/admin/product-badges/{slug}",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "product-badges",
-                    "{slug}"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "delete product badge products",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{url}}/api/admin/product-badge-product-delete/{id}",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "product-badge-product-delete",
-                    "{id}"
-                  ]
-                }
-              },
-              "response": []
-            }
-          ]
-        },
-        {
-          "name": "Campaign",
-          "item": [
-            {
-              "name": "store campaign data",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "name",
-                      "value": "Dashain Mega Sale",
-                      "type": "text",
-                      "uuid": "cb6ca193-2600-4898-8e76-7e3343dac467"
-                    },
-                    {
-                      "key": "description",
-                      "value": "Special deals for Dashain festival.",
-                      "type": "text",
-                      "uuid": "54d12f5d-fc13-4a27-83df-0a3ad6fda1fd"
-                    },
-                    {
-                      "key": "theme_color",
-                      "value": "#FF5733",
-                      "type": "text",
-                      "uuid": "67962f5c-32aa-402e-8f05-19ad8006ab6d"
-                    },
-                    {
-                      "key": "start_date",
-                      "value": "2025-09-20",
-                      "type": "text",
-                      "uuid": "7d292d5e-294f-4791-927e-c4d83f0c3ad4"
-                    },
-                    {
-                      "key": "end_date",
-                      "value": "2025-09-30",
-                      "type": "text",
-                      "uuid": "b1100b4a-9fd7-4477-81fc-2fdc5ab5cc76"
-                    },
-                    {
-                      "key": "type",
-                      "value": "festival",
-                      "type": "text",
-                      "uuid": "1b0bdf3e-677d-47ed-96a3-888575fe0031"
-                    }
-                  ]
-                },
-                "url": {
-                  "raw": "{{url}}/api/admin/campaigns",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "campaigns"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "list all campaign",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{url}}/api/admin/campaigns?pagination_limit=20&search_keyword",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "campaigns"
-                  ],
-                  "query": [
-                    {
-                      "key": "pagination_limit",
-                      "value": "20",
-                      "type": "text"
-                    },
-                    {
-                      "key": "search_keyword",
-                      "value": null,
-                      "type": "text"
-                    }
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "show single campaign with products",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{url}}/api/admin/campaigns/{id}",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "campaigns",
-                    "{id}"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "update campaign data",
-              "request": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "name",
-                      "value": "Dashain Mega Sale",
-                      "type": "text"
-                    },
-                    {
-                      "key": "description",
-                      "value": "Special deals for Dashain festival.",
-                      "type": "text"
-                    },
-                    {
-                      "key": "theme_color",
-                      "value": "#FF5733",
-                      "type": "text"
-                    },
-                    {
-                      "key": "start_date",
-                      "value": "2025-09-20",
-                      "type": "text"
-                    },
-                    {
-                      "key": "end_date",
-                      "value": "2025-09-30",
-                      "type": "text"
-                    },
-                    {
-                      "key": "type",
-                      "value": "festival",
-                      "type": "text"
-                    },
-                    {
-                      "key": "_method",
-                      "value": "PUT",
-                      "type": "text",
-                      "uuid": "dc0d1909-1724-4728-af21-b3146b4442f5"
-                    }
-                  ]
-                },
-                "url": {
-                  "raw": "{{url}}/api/admin/campaigns/{id}",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "campaigns",
-                    "{id}"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "delete campaign and its products",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{url}}/api/admin/campaigns/{id}",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "campaigns",
-                    "{id}"
-                  ]
-                }
-              },
-              "response": []
-            }
-          ]
-        },
-        {
-          "name": "Product Units",
-          "item": [
-            {
-              "name": "show all product units",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "category_id",
-                      "value": "1",
-                      "type": "text"
-                    },
-                    {
-                      "key": "sub_category_id",
-                      "value": "1",
-                      "type": "text"
-                    },
-                    {
-                      "key": "brand_id",
-                      "value": "1",
-                      "type": "text"
-                    },
-                    {
-                      "key": "name",
-                      "value": "Soap",
-                      "type": "text"
-                    },
-                    {
-                      "key": "description",
-                      "value": "Soap",
-                      "type": "text"
-                    },
-                    {
-                      "key": "short_description",
-                      "value": "100% pure and organic",
-                      "type": "text"
-                    },
-                    {
-                      "key": "selling_price",
-                      "value": "1000",
-                      "type": "text"
-                    },
-                    {
-                      "key": "cross_price",
-                      "value": "1500",
-                      "type": "text"
-                    },
-                    {
-                      "key": "unit_price",
-                      "value": "590",
-                      "type": "text"
-                    },
-                    {
-                      "key": "stock_quantity",
-                      "value": "200",
-                      "type": "text"
-                    },
-                    {
-                      "key": "product_weight",
-                      "value": "500 gm",
-                      "type": "text"
-                    },
-                    {
-                      "key": "sku",
-                      "value": "DSAFDA2",
-                      "type": "text"
-                    },
-                    {
-                      "key": "product_image[]",
-                      "type": "file",
-                      "uuid": "78e6c3a7-a51d-4774-aa86-921ffecc4640",
-                      "src": "/Users/hanciephago/Downloads/Black and Red Simple Car Icon Industrial Logo (6).png"
-                    },
-                    {
-                      "key": "handling_tags[]",
-                      "value": "1",
-                      "type": "text",
-                      "uuid": "2af0b465-e3ba-4c5f-88ed-729d827f3e55"
-                    },
-                    {
-                      "key": "handling_tags[]",
-                      "value": "2",
-                      "type": "text",
-                      "uuid": "301755a7-8839-41d4-a35c-e280a975f540"
-                    },
-                    {
-                      "key": "product_unit_id",
-                      "value": "2",
-                      "type": "text",
-                      "uuid": "0c2a364d-6db1-4049-b441-40f423eeb096"
-                    }
-                  ]
-                },
-                "url": {
-                  "raw": "{{url}}/api/admin/product-units?pagination_limit=20&search_keyword",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "product-units"
-                  ],
-                  "query": [
-                    {
-                      "key": "pagination_limit",
-                      "value": "20",
-                      "type": "text"
-                    },
-                    {
-                      "key": "search_keyword",
-                      "value": null,
-                      "type": "text"
-                    }
-                  ]
-                }
-              },
-              "response": []
-            }
-          ]
-        },
-        {
-          "name": "Campaign Products",
-          "item": [
-            {
-              "name": "store campaign product",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"products\": [37,38,39]\n}\n",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{url}}/api/admin/campaigns/products/{campaign_id}",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "campaigns",
-                    "products",
-                    "{campaign_id}"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "delete campaign products",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "{{url}}/api/admin/campaigns/products/{id}",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "campaigns",
-                    "products",
-                    "{id}"
-                  ]
-                }
-              },
-              "response": []
-            }
-          ]
-        },
-        {
           "name": "DB Backup",
           "item": [
             {
@@ -3671,112 +4238,6 @@
                     "api",
                     "admin",
                     "db-backup"
-                  ]
-                }
-              },
-              "response": []
-            }
-          ]
-        },
-        {
-          "name": "Order Assignments",
-          "item": [
-            {
-              "name": "order request send to driver",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "driver_id",
-                      "value": "6",
-                      "type": "text",
-                      "uuid": "9832359f-e700-43fa-8461-aff4e999383d"
-                    },
-                    {
-                      "key": "order_id",
-                      "value": "20",
-                      "type": "text",
-                      "uuid": "2d0e191a-0f63-48a5-b039-a84ea60c67a0"
-                    }
-                  ]
-                },
-                "url": {
-                  "raw": "{{url}}/api/admin/orders/driver-send-request",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "orders",
-                    "driver-send-request"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "assignment driver to confirmed order",
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "{{token}}",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "driver_id",
-                      "value": "1",
-                      "type": "text",
-                      "uuid": "c71a66da-6352-42ba-b65f-9c5866a3a18b"
-                    }
-                  ]
-                },
-                "url": {
-                  "raw": "{{url}}/api/admin/orders/21/assign-driver",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "orders",
-                    "21",
-                    "assign-driver"
                   ]
                 }
               },
