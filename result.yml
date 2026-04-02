@@ -29,26 +29,23 @@ components:
 tags:
   - name: Admin
   - name: Admin > Auth
-  - name: Admin > Site Settings
   - name: Admin > Admin
   - name: Admin > Category
-  - name: Admin > Sub Category
+  - name: Admin > Brand
+  - name: Admin > Tags
   - name: Admin > Products
+  - name: Admin > Site Settings
+  - name: Admin > FAQ
   - name: Admin > Contact Us
   - name: Admin > News Letter
-  - name: Admin > FAQ
+  - name: Admin > Banner
+  - name: Admin > Coupen
   - name: Admin > State
   - name: Admin > City
   - name: Admin > Customer
   - name: Admin > Dashboard
   - name: Admin > Order
-  - name: Admin > Product Handling Tag
-  - name: Admin > Product Badge
-  - name: Admin > Campaign
-  - name: Admin > Product Units
-  - name: Admin > Campaign Products
   - name: Admin > DB Backup
-  - name: Admin > Order Assignments
   - name: Admin > Settings
   - name: Customer
   - name: Customer > Auth
@@ -138,99 +135,6 @@ paths:
                 token:
                   type: string
                   example: asdfddfd
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/site-settings:
-    post:
-      tags:
-        - Admin > Site Settings
-      summary: store site settings
-      requestBody:
-        content:
-          multipart/form-data:
-            schema:
-              type: object
-              properties:
-                website_title:
-                  type: string
-                  example: Cartyne
-                logo:
-                  type: string
-                  format: binary
-                address:
-                  type: string
-                  example: KTM
-                contact_no:
-                  type: integer
-                  example: '9825915122'
-                home_page_banner_1:
-                  type: string
-                  format: binary
-                home_page_banner_2:
-                  type: string
-                  format: binary
-                home_page_banner_3:
-                  type: string
-                  format: binary
-                privacy_policy:
-                  type: string
-                terms_conditions:
-                  type: string
-                facebook_link:
-                  type: string
-                instagram_link:
-                  type: string
-                tiktok_link:
-                  type: string
-                whatsapp_number:
-                  type: string
-                footer_background_color:
-                  type: string
-                footer_text_color:
-                  type: string
-                primary_nav_background_color:
-                  type: string
-                primary_nav_text_color:
-                  type: string
-                secondary_nav_background_color:
-                  type: string
-                secondary_nav_text_color:
-                  type: string
-                email:
-                  type: string
-                about_us:
-                  type: string
-                  example: hy
-                fav_icon:
-                  type: string
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-    get:
-      tags:
-        - Admin > Site Settings
-      summary: show site setting data
-      security:
-        - bearerAuth: []
       parameters:
         - name: Accept
           in: header
@@ -346,10 +250,23 @@ paths:
               properties:
                 name:
                   type: string
-                  example: Drink
+                  example: Coca Cola
                 category_image:
                   type: string
                   format: binary
+                parent_id:
+                  type: integer
+                  example: '1'
+                description:
+                  type: string
+                meta_title:
+                  type: string
+                meta_description:
+                  type: string
+                sort_order:
+                  type: string
+                is_active:
+                  type: string
       security:
         - bearerAuth: []
       parameters:
@@ -381,6 +298,10 @@ paths:
             type: integer
           example: '5'
         - name: search_keyword
+          in: query
+          schema:
+            type: string
+        - name: parent_id
           in: query
           schema:
             type: string
@@ -449,11 +370,11 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /api/admin/sub-category:
+  /api/admin/brand:
     post:
       tags:
-        - Admin > Sub Category
-      summary: store sub category
+        - Admin > Brand
+      summary: store brand data
       requestBody:
         content:
           multipart/form-data:
@@ -462,13 +383,19 @@ paths:
               properties:
                 name:
                   type: string
-                  example: Beer1
-                sub_category_image:
+                  example: Laptop
+                description:
                   type: string
-                  format: binary
-                category_id:
+                  example: Laptop
+                is_active:
                   type: integer
                   example: '1'
+                is_featured:
+                  type: integer
+                  example: '1'
+                brand_logo:
+                  type: string
+                  format: binary
       security:
         - bearerAuth: []
       parameters:
@@ -484,8 +411,8 @@ paths:
             application/json: {}
     get:
       tags:
-        - Admin > Sub Category
-      summary: show all sub category
+        - Admin > Brand
+      summary: show all brands
       security:
         - bearerAuth: []
       parameters:
@@ -498,48 +425,26 @@ paths:
           in: query
           schema:
             type: integer
-          example: '5'
+          example: '8'
         - name: search_keyword
           in: query
           schema:
             type: string
-        - name: is_popular
+        - name: is_featured
           in: query
           schema:
-            type: boolean
-          example: 'true'
+            type: integer
+          example: '1'
       responses:
         '200':
           description: Successful response
           content:
             application/json: {}
-  /api/admin/sub-category/{id}:
-    delete:
-      tags:
-        - Admin > Sub Category
-      summary: delete sub category
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
+  /api/admin/brand/{id}:
     post:
       tags:
-        - Admin > Sub Category
-      summary: update sub category
+        - Admin > Brand
+      summary: update brand data
       requestBody:
         content:
           multipart/form-data:
@@ -548,13 +453,19 @@ paths:
               properties:
                 name:
                   type: string
-                  example: Bag
-                category_image:
+                  example: Laptop
+                description:
                   type: string
-                  format: binary
-                category_id:
+                  example: Laptop
+                is_active:
                   type: integer
                   example: '1'
+                is_featured:
+                  type: integer
+                  example: '1'
+                brand_logo:
+                  type: string
+                  format: binary
                 _method:
                   type: string
                   example: PUT
@@ -576,20 +487,148 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /api/admin/sub-categories/{id}/toggle-popular:
+    delete:
+      tags:
+        - Admin > Brand
+      summary: delete brand
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/brand/{id}/toggle-featured-brand:
     post:
       tags:
-        - Admin > Sub Category
-      summary: update popular sub category status
+        - Admin > Brand
+      summary: toogle brand feature
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/tags:
+    post:
+      tags:
+        - Admin > Tags
+      summary: store tags
       requestBody:
         content:
           multipart/form-data:
             schema:
               type: object
               properties:
-                is_popular:
-                  type: boolean
-                  example: 'true'
+                name:
+                  type: string
+                  example: Laptop
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - Admin > Tags
+      summary: show all tags
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: pagination_limit
+          in: query
+          schema:
+            type: integer
+          example: '8'
+        - name: search_keyword
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/tags/{id}:
+    post:
+      tags:
+        - Admin > Tags
+      summary: update tags
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Laptop
+                _method:
+                  type: string
+                  example: PUT
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Admin > Tags
+      summary: delete tags
       security:
         - bearerAuth: []
       parameters:
@@ -609,6 +648,235 @@ paths:
           content:
             application/json: {}
   /api/admin/products:
+    post:
+      tags:
+        - Admin > Products
+      summary: store product
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                category_id:
+                  type: integer
+                  example: '1'
+                brand_id:
+                  type: string
+                name:
+                  type: string
+                  example: Classic Cotton T-Shirt1
+                description:
+                  type: string
+                  example: Soft and comfortable everyday t-shirt
+                short_description:
+                  type: string
+                  example: 100% cotton, available in multiple colors and sizes
+                price:
+                  type: number
+                  example: '29.99'
+                compare_price:
+                  type: number
+                  example: '39.99'
+                cost_price:
+                  type: integer
+                  example: '12'
+                stock:
+                  type: integer
+                  example: '200'
+                low_stock_threshold:
+                  type: integer
+                  example: '5'
+                manage_stock:
+                  type: integer
+                  example: '1'
+                sku:
+                  type: string
+                  example: DS456568
+                product_image[0]:
+                  type: string
+                  format: binary
+                product_image[1]:
+                  type: string
+                  format: binary
+                tags[]:
+                  type: integer
+                  example: '2'
+                weight:
+                  type: number
+                  example: '0.5'
+                is_active:
+                  type: integer
+                  example: '1'
+                is_featured:
+                  type: integer
+                  example: '0'
+                meta_title:
+                  type: string
+                  example: Classic Cotton T-Shirt
+                meta_description:
+                  type: string
+                  example: Buy our classic cotton t-shirt
+                variants[0][name]:
+                  type: string
+                  example: Blue / L
+                variants[0][sku]:
+                  type: string
+                  example: TSH-001-BLU-
+                variants[0][price]:
+                  type: number
+                  example: '31.99'
+                variants[0][stock]:
+                  type: integer
+                  example: '10'
+                variants[0][attributes][color]:
+                  type: string
+                  example: blue
+                variants[0][attributes][size]:
+                  type: string
+                  example: L
+                variant_images[0]:
+                  type: string
+                  format: binary
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: vendor-store-id
+          in: header
+          schema:
+            type: integer
+          example: '10'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: 127.0.0.1:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.0
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Thu, 26 Mar 2026 09:19:36 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: |-
+                {
+                    "data": {
+                        "id": 5,
+                        "category_id": "1",
+                        "brand_id": null,
+                        "name": "Classic Cotton T-Shirt1",
+                        "slug": "classic-cotton-t-shirt1",
+                        "sku": "DS456568",
+                        "short_description": "100% cotton, available in multiple colors and sizes",
+                        "description": "Soft and comfortable everyday t-shirt",
+                        "price": "29.99",
+                        "compare_price": "39.99",
+                        "cost_price": "12.00",
+                        "stock": "200",
+                        "low_stock_threshold": "5",
+                        "manage_stock": true,
+                        "weight": "0.5",
+                        "is_active": true,
+                        "is_featured": false,
+                        "meta_title": "Classic Cotton T-Shirt",
+                        "meta_description": "Buy our classic cotton t-shirt",
+                        "sales_count": null,
+                        "average_rating": null,
+                        "review_count": null,
+                        "published_at": null,
+                        "created_at": "26th Mar 2026",
+                        "product_images": [
+                            {
+                                "id": 4,
+                                "url": "https://6863edaac5ba98c83f1c72723c7522e8.r2.cloudflarestorage.com/testingbucket/4/Screenshot-2025-08-23-191844.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=833b89db2cc88356c4b03155a1ca5fc6%2F20260326%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260326T091936Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=afdb6f35a6a385afe5347f3bd4118dedc56fc091d65725b6d312c6a565779f1c",
+                                "file_name": "Screenshot-2025-08-23-191844.png",
+                                "mime_type": "image/jpeg",
+                                "size": 35972,
+                                "order": 1
+                            },
+                            {
+                                "id": 5,
+                                "url": "https://6863edaac5ba98c83f1c72723c7522e8.r2.cloudflarestorage.com/testingbucket/5/Screenshot-2025-08-23-191851.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=833b89db2cc88356c4b03155a1ca5fc6%2F20260326%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260326T091936Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=a4182a598faecc8382532a322ea4359106351a9ebe4b9e63598926dc91f53961",
+                                "file_name": "Screenshot-2025-08-23-191851.png",
+                                "mime_type": "image/jpeg",
+                                "size": 48207,
+                                "order": 2
+                            }
+                        ],
+                        "category": {
+                            "id": 1,
+                            "parent_id": null,
+                            "name": "Drink",
+                            "slug": "drink",
+                            "description": null,
+                            "meta_title": null,
+                            "meta_description": null,
+                            "sort_order": 0,
+                            "is_active": 0,
+                            "image": null,
+                            "created_at": "26th Mar 2026"
+                        },
+                        "brand": null,
+                        "variants": [
+                            {
+                                "id": 2,
+                                "product_id": 5,
+                                "name": "Blue / L",
+                                "sku": "TSH-001-BLU-",
+                                "price": "31.99",
+                                "stock": 10,
+                                "attributes": {
+                                    "size": "L",
+                                    "color": "blue"
+                                },
+                                "is_active": true,
+                                "image": "https://6863edaac5ba98c83f1c72723c7522e8.r2.cloudflarestorage.com/testingbucket/3/WhatsApp-Image-2026-01-14-at-11.22.51-PM.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=833b89db2cc88356c4b03155a1ca5fc6%2F20260326%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260326T091936Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=28daf9f7c7cb6df78f13db6911d850912040936e5952990027b528162882238a"
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "id": 1,
+                                "name": "Mobile",
+                                "slug": "mobile"
+                            },
+                            {
+                                "id": 2,
+                                "name": "Laptop",
+                                "slug": "laptop"
+                            }
+                        ]
+                    },
+                    "message": "Product created successfully!"
+                }
     get:
       tags:
         - Admin > Products
@@ -621,15 +889,39 @@ paths:
           schema:
             type: string
           example: application/json
+        - name: pagination_limit
+          in: query
+          schema:
+            type: integer
+          example: '8'
+        - name: search_keyword
+          in: query
+          schema:
+            type: string
+        - name: is_active
+          in: query
+          schema:
+            type: integer
+          example: '1'
+        - name: category
+          in: query
+          schema:
+            type: integer
+          example: '1'
+        - name: brand
+          in: query
+          schema:
+            type: string
       responses:
         '200':
           description: Successful response
           content:
             application/json: {}
+  /api/admin/products/{id}:
     post:
       tags:
         - Admin > Products
-      summary: update product
+      summary: update product Copy
       requestBody:
         content:
           multipart/form-data:
@@ -639,48 +931,83 @@ paths:
                 category_id:
                   type: integer
                   example: '1'
-                sub_category_id:
-                  type: integer
-                  example: '1'
                 brand_id:
-                  type: integer
-                  example: '1'
+                  type: string
                 name:
                   type: string
-                  example: Laptop
+                  example: Classic Cotton T-Shirt1
                 description:
                   type: string
-                  example: Raw organic honey from Himalayas
+                  example: Soft and comfortable everyday t-shirt
                 short_description:
                   type: string
-                  example: 100% pure and organic
-                selling_price:
+                  example: 100% cotton, available in multiple colors and sizes
+                price:
+                  type: number
+                  example: '29.99'
+                compare_price:
+                  type: number
+                  example: '39.99'
+                cost_price:
                   type: integer
-                  example: '1000'
-                cross_price:
-                  type: integer
-                  example: '1500'
-                unit_price:
-                  type: integer
-                  example: '590'
-                stock_quantity:
+                  example: '12'
+                stock:
                   type: integer
                   example: '200'
-                product_weight:
-                  type: string
-                  example: 500 gm
-                sku:
-                  type: string
-                  example: DSAFDSD
-                product_image[]:
-                  type: string
-                  format: binary
-                handling_tags[]:
+                low_stock_threshold:
                   type: integer
-                  example: '2'
-                vendor_store_id:
+                  example: '5'
+                manage_stock:
                   type: integer
                   example: '1'
+                sku:
+                  type: string
+                  example: DS456568
+                product_image[0]:
+                  type: string
+                  format: binary
+                product_image[1]:
+                  type: string
+                  format: binary
+                tags[]:
+                  type: integer
+                  example: '2'
+                weight:
+                  type: number
+                  example: '0.5'
+                is_active:
+                  type: integer
+                  example: '1'
+                is_featured:
+                  type: integer
+                  example: '0'
+                meta_title:
+                  type: string
+                  example: Classic Cotton T-Shirt
+                meta_description:
+                  type: string
+                  example: Buy our classic cotton t-shirt
+                variants[0][name]:
+                  type: string
+                  example: Blue / L
+                variants[0][sku]:
+                  type: string
+                  example: TSH-001-BLU-
+                variants[0][price]:
+                  type: number
+                  example: '31.99'
+                variants[0][stock]:
+                  type: integer
+                  example: '10'
+                variants[0][attributes][color]:
+                  type: string
+                  example: blue
+                variants[0][attributes][size]:
+                  type: string
+                  example: L
+                variant_images[0]:
+                  type: string
+                  format: binary
                 _method:
                   type: string
                   example: PUT
@@ -697,12 +1024,16 @@ paths:
           schema:
             type: integer
           example: '10'
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: Successful response
           content:
             application/json: {}
-  /api/admin/products/{id}:
     get:
       tags:
         - Admin > Products
@@ -747,7 +1078,7 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /api/vendor/product-update-status/{product_id}:
+  /api/admin/product-update-status/{id}:
     post:
       tags:
         - Admin > Products
@@ -758,9 +1089,9 @@ paths:
             schema:
               type: object
               properties:
-                status:
-                  type: string
-                  example: active
+                is_active:
+                  type: integer
+                  example: '1'
                 _method:
                   type: string
                   example: PUT
@@ -772,7 +1103,7 @@ paths:
           schema:
             type: string
           example: application/json
-        - name: product_id
+        - name: id
           in: path
           schema:
             type: string
@@ -845,12 +1176,12 @@ paths:
               type: object
               example:
                 products:
-                  - id: 37
-                    selling_price: 799
-                    cross_price: 999
-                  - id: 38
-                    selling_price: 499
-                    cross_price: 999
+                  - id: 4
+                    price: 150000
+                    compare_price: 200000
+                    cost_price: 100000
+                  - id: 5
+                    cost_price: 50000
       security:
         - bearerAuth: []
       parameters:
@@ -864,61 +1195,87 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /api/admin/contact-us:
+  /api/admin/site-settings:
+    post:
+      tags:
+        - Admin > Site Settings
+      summary: store site settings
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                website_title:
+                  type: string
+                  example: Cartyne
+                logo:
+                  type: string
+                  format: binary
+                address:
+                  type: string
+                  example: KTM
+                contact_no:
+                  type: integer
+                  example: '9825915122'
+                home_page_banner_1:
+                  type: string
+                  format: binary
+                home_page_banner_2:
+                  type: string
+                  format: binary
+                home_page_banner_3:
+                  type: string
+                  format: binary
+                privacy_policy:
+                  type: string
+                terms_conditions:
+                  type: string
+                facebook_link:
+                  type: string
+                instagram_link:
+                  type: string
+                tiktok_link:
+                  type: string
+                whatsapp_number:
+                  type: string
+                footer_background_color:
+                  type: string
+                footer_text_color:
+                  type: string
+                primary_nav_background_color:
+                  type: string
+                primary_nav_text_color:
+                  type: string
+                secondary_nav_background_color:
+                  type: string
+                secondary_nav_text_color:
+                  type: string
+                email:
+                  type: string
+                about_us:
+                  type: string
+                  example: hy
+                fav_icon:
+                  type: string
+                  format: binary
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
     get:
       tags:
-        - Admin > Contact Us
-      summary: show all contact us list
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: pagination_limit
-          in: query
-          schema:
-            type: integer
-          example: '8'
-        - name: search_keyword
-          in: query
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/contact-us/{id}:
-    delete:
-      tags:
-        - Admin > Contact Us
-      summary: delete contact us
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/newsletters:
-    get:
-      tags:
-        - Admin > News Letter
-      summary: show all news letter
+        - Admin > Site Settings
+      summary: show site setting data
       security:
         - bearerAuth: []
       parameters:
@@ -1029,6 +1386,425 @@ paths:
                 _method:
                   type: string
                   example: PUT
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/contact-us:
+    get:
+      tags:
+        - Admin > Contact Us
+      summary: show all contact us list
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: pagination_limit
+          in: query
+          schema:
+            type: integer
+          example: '8'
+        - name: search_keyword
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/contact-us/{id}:
+    delete:
+      tags:
+        - Admin > Contact Us
+      summary: delete contact us
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/newsletters:
+    get:
+      tags:
+        - Admin > News Letter
+      summary: show all news letter
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/banners:
+    post:
+      tags:
+        - Admin > Banner
+      summary: store banner data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Summer Sale
+                subtitle:
+                  type: string
+                  example: Up to 50% off
+                link:
+                  type: string
+                  example: https://example.com/sale
+                button_text:
+                  type: string
+                  example: Shop Now
+                sort_order:
+                  type: integer
+                  example: '1'
+                is_active:
+                  type: integer
+                  example: '1'
+                starts_at:
+                  type: string
+                  example: '2026-03-26'
+                ends_at:
+                  type: string
+                  example: '2026-04-30'
+                banner_image:
+                  type: string
+                  format: binary
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - Admin > Banner
+      summary: show all banner data
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: pagination_limit
+          in: query
+          schema:
+            type: integer
+          example: '8'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/banners/{id}:
+    post:
+      tags:
+        - Admin > Banner
+      summary: update banner data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Summer Sale
+                subtitle:
+                  type: string
+                  example: Up to 50% off
+                link:
+                  type: string
+                  example: https://example.com/sale
+                button_text:
+                  type: string
+                  example: Shop Now
+                sort_order:
+                  type: integer
+                  example: '1'
+                is_active:
+                  type: integer
+                  example: '1'
+                starts_at:
+                  type: string
+                  example: '2026-03-26'
+                ends_at:
+                  type: string
+                  example: '2026-04-30'
+                banner_image:
+                  type: string
+                  format: binary
+                _method:
+                  type: string
+                  example: PUT
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Admin > Banner
+      summary: delete banner image
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/coupons:
+    post:
+      tags:
+        - Admin > Coupen
+      summary: store coupen
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
+                  example: SAVE20
+                type:
+                  type: string
+                  example: fixed
+                value:
+                  type: integer
+                  example: '20'
+                description:
+                  type: string
+                  example: Get $20 off your order
+                min_order_amount:
+                  type: integer
+                  example: '100'
+                max_discount_amount:
+                  type: integer
+                  example: '50'
+                usage_limit:
+                  type: integer
+                  example: '500'
+                usage_limit_per_user:
+                  type: integer
+                  example: '1'
+                starts_at:
+                  type: string
+                  example: '2026-03-26'
+                expires_at:
+                  type: string
+                  example: '2026-04-30'
+                is_active:
+                  type: integer
+                  example: '1'
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - Admin > Coupen
+      summary: show all coupens
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: pagination_limit
+          in: query
+          schema:
+            type: integer
+          example: '8'
+        - name: search_keyword
+          in: query
+          schema:
+            type: string
+        - name: is_active
+          in: query
+          schema:
+            type: integer
+          example: '1'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/coupons/{id}:
+    post:
+      tags:
+        - Admin > Coupen
+      summary: update coupen
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
+                  example: SAVE20
+                type:
+                  type: string
+                  example: fixed
+                value:
+                  type: integer
+                  example: '20'
+                description:
+                  type: string
+                  example: Get $20 off your order
+                min_order_amount:
+                  type: integer
+                  example: '100'
+                max_discount_amount:
+                  type: integer
+                  example: '50'
+                usage_limit:
+                  type: integer
+                  example: '500'
+                usage_limit_per_user:
+                  type: integer
+                  example: '1'
+                starts_at:
+                  type: string
+                  example: '2026-03-26'
+                expires_at:
+                  type: string
+                  example: '2026-04-30'
+                is_active:
+                  type: integer
+                  example: '1'
+                _method:
+                  type: string
+                  example: PUT
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - Admin > Coupen
+      summary: show single coupen data
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Admin > Coupen
+      summary: delete coupen
       security:
         - bearerAuth: []
       parameters:
@@ -1630,344 +2406,6 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /api/admin/product-handling-tags:
-    get:
-      tags:
-        - Admin > Product Handling Tag
-      summary: show product handling tags list
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: pagination_limit
-          in: query
-          schema:
-            type: integer
-          example: '8'
-        - name: search_keyword
-          in: query
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/product-badges:
-    get:
-      tags:
-        - Admin > Product Badge
-      summary: list product badges
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: pagination_limit
-          in: query
-          schema:
-            type: integer
-          example: '8'
-        - name: search_keyword
-          in: query
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/product-badges/{slug}:
-    get:
-      tags:
-        - Admin > Product Badge
-      summary: show product badges data
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: slug
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/product-badge-product-delete/{id}:
-    delete:
-      tags:
-        - Admin > Product Badge
-      summary: delete product badge products
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/campaigns:
-    post:
-      tags:
-        - Admin > Campaign
-      summary: store campaign data
-      requestBody:
-        content:
-          multipart/form-data:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  example: Dashain Mega Sale
-                description:
-                  type: string
-                  example: Special deals for Dashain festival.
-                theme_color:
-                  type: string
-                  example: '#FF5733'
-                start_date:
-                  type: string
-                  example: '2025-09-20'
-                end_date:
-                  type: string
-                  example: '2025-09-30'
-                type:
-                  type: string
-                  example: festival
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-    get:
-      tags:
-        - Admin > Campaign
-      summary: list all campaign
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: pagination_limit
-          in: query
-          schema:
-            type: integer
-          example: '20'
-        - name: search_keyword
-          in: query
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/campaigns/{id}:
-    get:
-      tags:
-        - Admin > Campaign
-      summary: show single campaign with products
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-    post:
-      tags:
-        - Admin > Campaign
-      summary: update campaign data
-      requestBody:
-        content:
-          multipart/form-data:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  example: Dashain Mega Sale
-                description:
-                  type: string
-                  example: Special deals for Dashain festival.
-                theme_color:
-                  type: string
-                  example: '#FF5733'
-                start_date:
-                  type: string
-                  example: '2025-09-20'
-                end_date:
-                  type: string
-                  example: '2025-09-30'
-                type:
-                  type: string
-                  example: festival
-                _method:
-                  type: string
-                  example: PUT
-      parameters:
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-    delete:
-      tags:
-        - Admin > Campaign
-      summary: delete campaign and its products
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/product-units:
-    get:
-      tags:
-        - Admin > Product Units
-      summary: show all product units
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: pagination_limit
-          in: query
-          schema:
-            type: integer
-          example: '20'
-        - name: search_keyword
-          in: query
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/campaigns/products/{campaign_id}:
-    post:
-      tags:
-        - Admin > Campaign Products
-      summary: store campaign product
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              example:
-                products:
-                  - 37
-                  - 38
-                  - 39
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: campaign_id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/campaigns/products/{id}:
-    delete:
-      tags:
-        - Admin > Campaign Products
-      summary: delete campaign products
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
   /api/admin/db-backup:
     post:
       tags:
@@ -1975,63 +2413,6 @@ paths:
       summary: download db backup
       requestBody:
         content: {}
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/orders/driver-send-request:
-    post:
-      tags:
-        - Admin > Order Assignments
-      summary: order request send to driver
-      requestBody:
-        content:
-          multipart/form-data:
-            schema:
-              type: object
-              properties:
-                driver_id:
-                  type: integer
-                  example: '6'
-                order_id:
-                  type: integer
-                  example: '20'
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: Accept
-          in: header
-          schema:
-            type: string
-          example: application/json
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/admin/orders/21/assign-driver:
-    post:
-      tags:
-        - Admin > Order Assignments
-      summary: assignment driver to confirmed order
-      requestBody:
-        content:
-          multipart/form-data:
-            schema:
-              type: object
-              properties:
-                driver_id:
-                  type: integer
-                  example: '1'
       security:
         - bearerAuth: []
       parameters:
