@@ -384,7 +384,7 @@
                     },
                     {
                       "key": "is_active",
-                      "value": "",
+                      "value": "1",
                       "type": "text",
                       "uuid": "c06b8455-998d-4da5-af8c-83770edf4c5b"
                     }
@@ -544,6 +544,48 @@
                     "admin",
                     "category",
                     "{id}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "category leaf (show all child category for product list)",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/category-leaf",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "category-leaf"
                   ]
                 }
               },
