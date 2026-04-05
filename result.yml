@@ -258,7 +258,8 @@ paths:
                 sort_order:
                   type: string
                 is_active:
-                  type: string
+                  type: integer
+                  example: '1'
       security:
         - bearerAuth: []
       parameters:
@@ -357,6 +358,24 @@ paths:
           schema:
             type: string
           required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/admin/category-leaf:
+    get:
+      tags:
+        - Admin > Category
+      summary: category leaf (show all child category for product list)
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
       responses:
         '200':
           description: Successful response
