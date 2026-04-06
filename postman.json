@@ -5123,6 +5123,48 @@
               "response": []
             }
           ]
+        },
+        {
+          "name": "Product Sections",
+          "item": [
+            {
+              "name": "show all product sections",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/api/product-sections",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "product-sections"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "single show product section data",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/api/product-sections/{slug}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "product-sections",
+                    "{slug}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
         }
       ]
     }
