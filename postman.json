@@ -903,7 +903,7 @@
                   "formdata": [
                     {
                       "key": "name",
-                      "value": "Laptop",
+                      "value": "Mobile",
                       "type": "text",
                       "uuid": "9f7b3ac2-135c-4946-944e-1f76cfd4c32b"
                     }
@@ -4052,6 +4052,370 @@
                     "api",
                     "admin",
                     "settings"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Product Section",
+          "item": [
+            {
+              "name": "store product section name",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Deal of the Day",
+                      "type": "text",
+                      "uuid": "7a8b83df-c2cd-4953-aee1-679608028b3d"
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "006743c6-eb84-4401-81ea-f85f0de9743e"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "b9978a83-fa4b-4cb9-8145-c5b638d88a0f"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/product-sections",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "product-sections"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update product section name",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Deal of the Day",
+                      "type": "text",
+                      "uuid": "7a8b83df-c2cd-4953-aee1-679608028b3d"
+                    },
+                    {
+                      "key": "is_active",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "006743c6-eb84-4401-81ea-f85f0de9743e"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "b9978a83-fa4b-4cb9-8145-c5b638d88a0f"
+                    },
+                    {
+                      "key": "_method",
+                      "value": "PUT",
+                      "type": "text",
+                      "uuid": "4f55843e-c410-48ee-90c1-bc3b49ed53f7"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/product-sections/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "product-sections",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "show product section data",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/product-sections",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "product-sections"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "show single  product section data",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/product-sections/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "product-sections",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete product sections",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/product-sections/{id}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "product-sections",
+                    "{id}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "product section attach product",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"product_id\": 1,\r\n    \"sort_order\": 1\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/product-sections/1/attach-product",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "product-sections",
+                    "1",
+                    "attach-product"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "product section sync product",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"products\": [\r\n        { \"id\": 5,  \"sort_order\": 1 },\r\n        { \"id\": 10, \"sort_order\": 2 },\r\n        { \"id\": 8,  \"sort_order\": 3 },\r\n        { \"id\": 3,  \"sort_order\": 4 }\r\n    ]\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/admin/product-sections/{id}/sync-products",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "product-sections",
+                    "{id}",
+                    "sync-products"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "product section detach products",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/admin/product-sections/{id}/detach-product",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "product-sections",
+                    "{id}",
+                    "detach-product"
                   ]
                 }
               },
